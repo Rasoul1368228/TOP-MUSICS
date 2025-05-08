@@ -1,0 +1,349 @@
+/* فونت فارسی */
+@font-face {
+  font-family: "vazir";
+  src: url("../font/wolf2/Vazirmatn-Bold.woff2") format("woff2");
+}
+
+/* ریست اولیه */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 70px;
+  margin: 0;
+  font-family: "vazir";
+  font-size: 12px;
+  background: linear-gradient(to left, #f8f9fa, #ffffff);
+  padding-right: 180px; /* جلوگیری از رفتن محتوا زیر منو - اگر دیگر نیاز نیست می‌توان حذف کرد */
+}
+
+/* هدر */
+.header {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to left, #f8f9fa, #ffffff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* باکس‌های اصلی */
+.boxpedar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.box-pesar {
+  flex: 1 1 250px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+  margin-right: 300px;
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.box-aval {
+  width: 77%;
+  max-width: 800px;
+  border: 1px solid blueviolet;
+  margin-right: 220px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 2;
+  text-align: justify;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.box-pesar h3 {
+  font-size: 14px;
+  background-color: cyan;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.box-pesar h4 {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.box-pesar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.box-pesar img:hover {
+  animation: zoom-shake 0.6s ease forwards;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box-pesar h3,
+.box-pesar p,
+.box-pesar h4,
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* باکس پخش صوت */
+.box-audio {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.audio {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+/* عنوان شعر */
+.lyric-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  backdrop-filter: blur(2px);
+}
+
+.lyric-title:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: crimson;
+  transform: scale(1.02);
+}
+
+/* منوی راست */
+.nav-right {
+  /* position: fixed; */
+  top: 10%;
+  right: 0;
+  height: 75%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px 0 0 20px;
+  /* padding: 20px 10px; */
+  z-index: 1000;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+.nav-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.nav-right ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-right ul li a:hover {
+    color: crimson;
+  transform: translateX(-5px);
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+/* آیکون منو (موقتاً یک ایموجی) */
+.nav-right ul li a::before {
+  content: "🎧";
+  margin-left: 8px;
+}
+
+/* فوتر سایت */
+.footer {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to left, #f8f9fa, #ffffff);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+}
+
+/* ساختار Flexbox */
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 25%;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-top: 35px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 290px;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-left a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+main {
+  width: 70%;
+  padding: 20px;
+}
+
+.sidebar h2,
+main h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.up-box1 {
+  height: 300px;
+  width: 70px;
+  border: 1px solid blueviolet;
+  margin-right: 50%;
+}
+
+.aa{
+color: #0e0303;
+font-size: 16px;
+margin-right: 300px;
+
+}
+
+
+
+/* ریسپانسیو کامل */
+@media (max-width: 1024px) {
+  .box-pesar {
+    margin-right: 0;
+  }
+
+  .box-aval {
+    margin-right: 0;
+    width: 90%;
+  }
+
+  body {
+    padding-right: 0;
+  }
+
+  .sidebar,
+  .sidebar-left {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .boxpedar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-pesar {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
