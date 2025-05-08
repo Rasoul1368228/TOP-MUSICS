@@ -300,20 +300,21 @@ margin-right: 300px;
 }
 
 
-
-/* ریسپانسیو کامل */
+/* ریسپانسیو برای تبلت و لپ‌تاپ‌های کوچک */
 @media (max-width: 1024px) {
-  .box-pesar {
-    margin-right: 0;
+  body {
+    padding-right: 0;
   }
 
+  .boxpedar {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .box-pesar,
   .box-aval {
     margin-right: 0;
     width: 90%;
-  }
-
-  body {
-    padding-right: 0;
   }
 
   .sidebar,
@@ -321,17 +322,42 @@ margin-right: 300px;
     width: 100%;
     height: auto;
     position: relative;
-    margin: 0;
+    padding: 10px;
+    margin-top: 20px;
     box-shadow: none;
     border-radius: 0;
+    display: none;
   }
 
   main {
     width: 100%;
     padding: 10px;
   }
+
+  .nav-right ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-right {
+    display: none;
+    height: auto;
+    position:relative;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 5px;
+  }
+
+  .footer,
+  .header {
+    text-align: center;
+    padding: 10px;
+  }
 }
 
+/* ریسپانسیو برای موبایل */
 @media (max-width: 768px) {
   .boxpedar {
     flex-direction: column;
@@ -339,11 +365,43 @@ margin-right: 300px;
   }
 
   .box-pesar {
-    width: 90%;
+    width: 95%;
     max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .box-aval {
+    width: 95%;
+    margin: 10px auto;
   }
 
   .container {
     flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-right ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-right ul li a {
+    justify-content: center;
+  }
+
+  .sidebar,
+  .sidebar-left {
+    display: none; /* پنهان‌سازی سایدبار در موبایل */
+  }
+
+  .up-box1 {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .aa {
+    font-size: 14px;
+    margin-right: 0;
+    text-align: center;
   }
 }
