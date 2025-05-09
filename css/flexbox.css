@@ -119,25 +119,52 @@ body {
   align-items: center;
 }
 
-/* باکس پخش صوت */
+/* باکس اصلی صوت */
 .box-audio {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
 }
 
+/* کارت صوت */
 .audio {
-  font-size: 12px;
-  font-weight: bold;
-  color: #333;
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 300px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
   text-align: right;
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.audio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* برای نمایش خوب در موبایل */
+@media screen and (max-width: 600px) {
+  .audio {
+    width: 100%;
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  .box-audio {
+    padding: 0 5px;
+    gap: 15px;
+  }
+}
+
 
 /* عنوان شعر */
 .lyric-title {
