@@ -235,6 +235,24 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(3px);
 }
+.download-btn {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
+.download-btn:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
 
 /* آیکون منو (موقتاً یک ایموجی) */
 .nav ul li a::before {
