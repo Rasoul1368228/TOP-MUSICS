@@ -66,25 +66,24 @@ body {
 }
 
 .box-avval {
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.box-p{
-    width: 77%;
-      max-width: 700px;
-      border: 1px solid blueviolet;
-      margin: 0;
-      background-color: rgba(255, 255, 255, 0.4); /* کم‌نورتر برای افکت بهتر */
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 14px;
-      line-height: 2;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+.box-p {
+  width: 77%;
+  max-width: 700px;
+  border: 1px solid blueviolet;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* کم‌نورتر برای افکت بهتر */
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 2;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .box-pesar h3 {
@@ -139,7 +138,11 @@ body {
 
 /* کارت صوت */
 .audio {
-  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -160,7 +163,8 @@ body {
 
 /* برای نمایش خوب در موبایل */
 @media screen and (max-width: 600px) {
-  .ahange-bartar{}
+  .ahange-bartar {
+  }
   .audio {
     width: 100%;
     font-size: 13px;
@@ -172,7 +176,6 @@ body {
     gap: 15px;
   }
 }
-
 
 /* عنوان شعر */
 .lyric-title {
@@ -192,6 +195,30 @@ body {
   transform: scale(1.02);
 }
 
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 25px;
+  max-width: 250px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.search-icon {
+  color: #555;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+}
 /* منوی راست */
 .nav {
   /* position: fixed; */
@@ -199,12 +226,14 @@ body {
   right: 0;
   height: 75%;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   border-radius: 20px 0 0 20px;
   /* padding: 20px 10px; */
   z-index: 1000;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
- }
+  box-shadow:0px 0px 30px rgba(227,228,237,0.37);
+border:2px solid rgba(255, 255, 255, 0.18)  ;
+
+}
 
 .nav ul {
   list-style: none;
@@ -213,7 +242,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 25px;
-  
 }
 
 .nav ul li a {
@@ -230,7 +258,7 @@ body {
 }
 
 .nav ul li a:hover {
-    color: crimson;
+  color: crimson;
   transform: translateX(-5px);
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(3px);
@@ -254,11 +282,6 @@ body {
   transform: scale(1.05);
 }
 
-/* آیکون منو (موقتاً یک ایموجی) */
-.nav ul li a::before {
-  content: "🎧";
-  margin-left: 8px;
-}
 
 /* فوتر سایت */
 .footer {
@@ -350,11 +373,10 @@ main h3 {
   margin-right: 50%;
 }
 
-.aa{
-color: #0e0303;
-font-size: 16px;
-margin-right: 300px;
-
+.aa {
+  color: #0e0303;
+  font-size: 16px;
+  margin-right: 300px;
 }
 
 /* تنظیمات ریسپانسیو */
@@ -416,7 +438,7 @@ margin-right: 300px;
 
 /* ریسپانسیو برای موبایل */
 @media (max-width: 768px) {
-    body {
+  body {
     font-size: 12px !important;
     padding-right: 0 !important;
     padding-top: 60px;
@@ -449,15 +471,14 @@ margin-right: 300px;
   .nav {
     display: none;
   }
- 
 
   .sidebar,
   .sidebar-left {
     display: none;
   }
-.box-p{
-  display: none;
-}
+  .box-p {
+    display: none;
+  }
   .up-box1 {
     margin-right: 0;
     width: 100%;
@@ -475,7 +496,7 @@ margin-right: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap:8px;
+  gap: 8px;
   margin-top: 20px;
   direction: rtl;
   margin-right: 16%;
@@ -510,7 +531,7 @@ margin-right: 300px;
 }
 
 .h22 {
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   margin-bottom: 20px;
   margin-right: 310px;
 }
