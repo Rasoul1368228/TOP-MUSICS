@@ -1,4 +1,4 @@
-// تابع اعتبارسنجی ایمیل با استفاده از الگوی دقیق‌تر
+ // تابع اعتبارسنجی ایمیل با استفاده از الگوی دقیق‌تر
 function validateEmail() {
   const emailInput = document.getElementById("emailInput");
   const email = emailInput.value.trim(); // حذف فاصله‌های اضافی
@@ -49,3 +49,52 @@ showSlide(slideIndex);
 
 // تغییر خودکار اسلاید هر 5 ثانیه
 setInterval(() => moveSlide(1), 8000);
+
+
+ const audios = document.querySelectorAll("audio");
+  audios.forEach(audio => {
+    audio.addEventListener("play", () => {
+      audios.forEach(a => {
+        if (a !== audio) a.pause();
+      });
+    });
+  });
+ش
+  function searchArtists() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+    
+    // بخش‌های مختلفی که می‌خواهیم جستجو روی آن‌ها اعمال شود
+    const cards = document.querySelectorAll(".music-card");
+    const boxes = document.querySelectorAll(".box-pesar");
+    const titles = document.querySelectorAll(".aa");
+
+    // همه را نمایش می‌دهیم در ابتدا
+    cards.forEach(card => card.style.display = "block");
+    boxes.forEach(box => box.style.display = "block");
+    titles.forEach(title => title.style.display = "block");
+
+    if (input === "") return;
+
+    // اگر چیزی وارد شده، فقط بخش‌هایی را نگه داریم که شامل آن هستند
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (!text.includes(input)) {
+        card.style.display = "none";
+      }
+    });
+
+    boxes.forEach(box => {
+      const text = box.innerText.toLowerCase();
+      if (!text.includes(input)) {
+        box.style.display = "none";
+      }
+    });
+
+    titles.forEach(title => {
+      const text = title.innerText.toLowerCase();
+      if (!text.includes(input)) {
+        title.style.display = "none";
+      }
+    });
+  }
+
