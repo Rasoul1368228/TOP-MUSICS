@@ -1,254 +1,192 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html dir="rtl" lang="fa">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="دانلود جدیدترین آهنگ‌های ایرانی با کیفیت بالا و لینک مستقیم | مکس موزیک" />
-    <meta name="keywords" content="آهنگ جدید, موزیک ایرانی, دانلود آهنگ, مکس موزیک" />
-    <meta name="author" content="مکس موزیک" />
-    <title>مکس موزیک</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/flexbox.css" />
+    <title>درباره مکس تیم</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.png"
+    />
+
+    <!-- فونت و آیکون‌ها -->
+    <link href="https://fonts.cdnfonts.com/css/dana" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- فایل‌های CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
-    
-     <header class="header">
-      <div class="search-box">
-  <input type="text" id="searchInput" placeholder="جستجوی خواننده..." onkeyup="searchArtists()" />
-</div>
-      <div class="nav">
+  <body class="home-page" id="top">
+    <div id="splash-screen">
+      <img src="./images/log.jpg" alt="تیم مدیریت طراحی مکس  " />
+      <h2>درحال آماده سازی سایت</h2>
+      <p>مکس تیم</p>
+    </div>
+  <!-- هدر سایت -->
+    <header>
+
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="./images/log.jpg" alt="لوگوی مکس تیم" />
+          </a>
+        </div>
+ <div class="hamburger">☰</div> <!-- این آیکون منو همبرگریه -->
         <ul>
-          <li title="صفحه اصلی">
-            <a href="#"><i class='bx bxs-home'></i> خانه</a>
+         
+         
+          <li>
+            <a href="services.html"><i class="fas fa-cogs"></i> خدمات</a>
           </li>
-          <li title="دسته بندی">
-            <a href="#"><i class='bx bxs-category'></i> دسته‌بندی</a>
+          
+           <li>
+            <a href="about.html"><i class="fas fa-user"></i> درباره ما</a>
           </li>
-          <li title="درباره تیم">
-            <a href="#"><i class='bx bxs-group'></i> درباره تیم</a>
+           <li>
+            <a href="gimatha.html"><i class="fas fa-home"></i>تعرفه طراحی </a>
           </li>
+          <li>
+            
+            <a
+              href="https://wa.me/09021157234?text=سلام! نیاز به پشتیبانی دارم"
+              title="تماس با پشتیبانی">
+              <i class="fas fa-headset"></i> پشتیبانی
+            </a>
+          </li>
+          <li>
+            <a href="login.html"><i class="fas fa-sign-in"></i>  پورتال مشتریان </a>
+          </li>
+</div>
+
         </ul>
-      </div>
+        <!-- این قسمت را اضافه کنید -->
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/nevisande2000"
+            target="_blank"
+            title="اینستاگرام"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.eitaa.com/nevisande2000"
+            target="_blank"
+            title="ایتا"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://telegram.org/nevisande2000"
+            target="_blank"
+            title="تلگرام"
+            ><i class="fab fa-telegram-plane"></i
+          ></a>
+        </div>
+        <div
+          class="hamburger"
+          onclick="toggleMenu(this)"
+          aria-label="باز و بسته کردن منو"
+          role="button"
+          tabindex="0"
+        >
+        </div>
+      </nav>
+          </nav>
     </header>
 
-
+    <!-- محتوای اصلی صفحه -->
     <main>
-        <div class="box-avval">
-        <p class="box-p">
-          مکس موزیک تابع قوانین جمهوری اسلامی می‌باشد و در پایگاه ساماندهی ثبت شده است.<br />
-          آهنگ‌های سایت مجاز بوده و موزیک‌های قرار گرفته‌شده با کسب رضایت صاحب اثر بوده‌اند.<br />
-          جدیدترین آهنگ‌های ایرانی و پرطرفدار با لینک مستقیم و رایگان، همراه با دو کیفیت.
-        </p>
-      </div>
-          
-      <section dir="rtl">
-        <h2 style="margin-right: 230px;">آهنگ‌های ویژه و جدید</h2>
-        <div class="ahange-bartar">
-      
-          <a href="#chavoshi" class="music-card">
-            <img src="https://upmusics.com/wp-content/uploads/2025/02/IMG_20250205_200927_718_resize_50.jpg" alt="موزیک" />
-            <div class="music-info">محسن چاووشی  </div>
+      <!-- بنر اصلی (Hero Banner) -->
+      <section
+        class="hero-banner"
+        role="banner"
+        aria-label="بنر معرفی خدمات مکــس تیم"
+      >
+        <div class="hero-content">
+          <h1>طراحی سایت حرفه‌ای، امن و سریع</h1>
+          <p>مهم نیست کجای مسیر هستید کافی است با مکس تیم همراه شوید <br /></p>
+          <a
+            href="login.html"
+            class="btn-cta"
+            role="button"
+            aria-label="ثبت سفارش یا مشاوره رایگان"
+          >
+            ثبت سفارش / مشاوره رایگان
           </a>
-      
-          <a href="#" class="music-card">
-            <img src="https://upmusics.com/wp-content/uploads/2025/05/Screenshot-2025-05-04-150602.jpg" alt="موزیک" />
-            <div class="music-info">  یوسف زمانی</div>
-          </a>
-      
-          <a href="#armin" class="music-card">
-            <img src="https://upmusics.com/wp-content/uploads/2025/04/photo_2025-04-25_11-18-48_Musics.webp" alt="موزیک" />
-            <div class="music-info">آرمین زارعی  </div>
-          </a>
-      
-          <a href="#ehsan" class="music-card">
-            <img src="https://upmusics.com/wp-content/uploads/2024/12/Screenshot-2024-12-26-144240_Musics.webp" alt="موزیک" />
-            <div class="music-info">  احسان دریا دل</div>
-          </a>
-          
-          <a href="#darabi" class="music-card">
-            <img src="https://upmusics.com/wp-content/uploads/2025/04/Tike-Tike-Darabi-Final-_Musics.webp" alt="موزیک" />
-            <div class="music-info">مهدی دارابی  </div>
-          </a>
-          
-          <a href="#farzad" class="music-card" onclick="showAudio()">
-            <img src="https://upmusics.com/wp-content/uploads/2021/01/raw.jpg" alt="موزیک" />
-            <div class="music-info">  فرزاد فرزین</div>
-          </a>
-          
-          <!-- بقیه موارد -->
-          
         </div>
       </section>
-      <div class="container">
-        
-   <!-- سایدبار راست -->
-        <aside class="sidebar">
-          <h2><i class='bx bx-music'></i> دسته‌بندی آهنگ‌ها</h2>
-          <ul>
-            <li><a href="#"><i class='bx bx-music'></i> آهنگ‌های جدید</a></li>
-            <li><a href="#"><i class='bx bx-dock-top'></i> ریمیکس</a></li>
-            <li><a href="#"><i class='bx bx-star'></i> خوانندگان برتر هفته</a></li>
-            <li><a href="#"><i class='bx bx-microphone'></i> رپ</a></li>
-            <li><a href="#"><i class='bx bx-globe'></i> ترکی</a></li>
-            <li><a href="#"><i class='bx bx-world'></i> خارجی</a></li>
-            <li><a href="#"><i class='bx bx-volume-full'></i> بیس دار</a></li>
-          </ul>
-          <h2 style="border: 2px solid brown; border-radius: 10px"><i class="bx bx-user-voice"></i> فهرست هنرمندان</h2>
-          <ul  id="artistList">
-            <li><a href="#"><i class="bx bx-user"></i> بهروز وثوقی</a></li>
-            <li><a href="#"><i class="bx bx-user"></i> مهراد جم</a></li>
-            <li><a href="#"><i class="bx bx-user"></i> محسن یگانه</a></li>
-          </ul>
-        </aside>
 
-        <!-- سایدبار چپ -->
-        <aside class="sidebar-left">
- <h2> <i class='bx bx-category'></i> بروزترین ها</h2>
-       
-
-          <h2><i class="bx bx-microphone"></i> خوانندگان</h2>
-        
-        </aside>
-
-        <!-- محتوای اصلی -->
-        <section >
-        <!-- کارت موزیک -->
-
- <h2 class="aa">
-  آهنگ: پازل بند 
-  تاریخ انتشار: 17 اردیبهشت 1404
-</h2>
-
-<div class="box-pesar">
-  <p>می‌توانید از لینک زیر ترانه <strong>ﺑﻴﺎ ﺑﺮﻳﻢ ﻳﻪ ﺳﻔﺮ آﺧﺮ ﻫﻔﺘﻪ دو ﻧﻔﺮه</strong> دانلود کنید:</p>
-  <img src="./images/Puzzle-band.webp" alt="موزیک" />
-
-  <p>خواننده این اثر: پازل بند | پخش آنلاین همین موزیک</p>
-
-  <div class="box-audio">
-    <audio controls class="audio">
-      <source src="./mp3/Puzzle_Band_320.mp3" type="audio/mpeg" />
-      مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
-    </audio>
-  </div>
-   <a href="./mp3/Puzzle_Band_320.mp3" download>
-          <button class="download-btn"><i class="ri-download-2-line"></i> دانلود با کیفیت 320</button>
-        </a>
- </div>
-
-          <!-- کارت موزیک -->
-
-          <h2 class="aa"> 
-             آهنگ احسان دریادل بطری
-             
-            /تاریخ انتشار
-         
-            /
-            17 دی 1403
-           </h2>
-          <div class="box-pesar" id="ehsan">
-            <h4> می‌توانید از لینک زیر ترانه بطری با صدای احسان دریادل دانلود کنید و گوش دهید </h4><br>
-            <img src="https://upmusics.com/wp-content/uploads/2024/12/Screenshot-2024-12-26-144240_Musics.webp" alt="موزیک" />
-            
-            <h4>خواننده این اثر : احسان دریادل
-              /
-              پخش آنلاین همین موزیک
-            
-            </h4>
-
-            <div class="box-audio">
-              <audio controls class="audio">
-                <source src="./mp3/Ehsan Daryadel.mp3" type="audio/mpeg" />
-                مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
-              </audio>
-            </div>   
-           <a href="./mp3/Ehsan Daryadel.mp3" download>
-    <button class="download-btn">🎧 دانلود با کیفیت 320</button>
-  </a>
- </div>
-          <!-- اهنگ بعدی-->
-          <h2 class="aa"> دانلود آهنگ فرزاد فرزین نفس
-            /
-             تاریخ انتشار
-            /
-      29 مهر 1403  </h2>
-      
-      <div class="box-pesar" id="farzad">
-        <h4> می‌توانید از لینک زیر ترانه فرزاد فرزین بنام نفس را دانلود کنید و گوش دهید </h4>
-        <img src="https://upmusics.com/wp-content/uploads/2021/01/raw.jpg" alt="موزیک" />
-        
-        <h4>خواننده این اثر : فرزاد فرزین / پخش آنلاین همین موزیک</h4>
-        
-              
-        <!-- بخش موزیک که مخفی است -->
-       <div class="box-audio">
-    <audio controls class="audio" id="audioBox">
-        <source src="./mp3/Farzad Farzin.mp3" type="audio/mpeg" />
-        مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
-    </audio>
-</div>
-        <a href="./mp3/Farzad Farzin.mp3" download>
-    <button class="download-btn">🎧 دانلود با کیفیت 320</button>
-  </a>
-    </div>
-           <!-- اهنگ بعدی-->
-           <h2 class="aa">  آهنگ آرمین زارعی به تو میرسه
-                       تاریخ انتشار 
-                        /
-            13 اردیبهشت 1404
-           </h2>
-      <div class="box-pesar" id="armin">
-        <h4> امروز برای شما کاربران عزیز ترانه به تو میرسه با صدای آرمین زارعی را آماده کرده ایم</h4>
-        <img src="https://upmusics.com/wp-content/uploads/2025/04/photo_2025-04-25_11-18-48_Musics.webp" alt="موزیک" />
-        
-        <h4>خواننده این اثر : آرمین زارعی
-          /
-          پخش آنلاین همین موزیک</h4>
-        
-              
-        <!-- بخش موزیک که مخفی است -->
-        <div class="box-audio">
-            <audio controls class="audio" id="audioBox" ">
-                <source src="./mp3/Armin Zarei.mp3" type="audio/mpeg" />
-                مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
-            </audio>
+      <!-- معرفی خدمات کارت‌ها -->
+      <section class="services-cards" aria-label="خدمات ما">
+        <div class="card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>طراحی سایت شرکتی</h3>
+          <p>سایت‌های حرفه‌ای برای معرفی کسب‌وکار شما به بهترین شکل.</p>
+          <a href="services.html#corporate" class="learn-more">بیشتر بدانید</a>
         </div>
-                <a href="./mp3//Armin Zarei.mp3" download>
-    <button class="download-btn">🎧 دانلود با کیفیت 320</button>
-  </a>
-    </div>
-
-          <!-- کپی کارت بالا برای موارد بیشتر -->
-          <h2 class="aa"> آهنگ  چاووشی ساعت دیواری
-            /تاریخ انتشار
-                       /
-            18 اردیبهشت 1404
-           </h2>
-      <div class="box-pesar">
-        <h4> می‌تواید از لینک زیر ترانه  محسن چاووشی بنام ساعت دیواری را دانلود کنید و گوش دهید </h4><br>
-        <img src="https://upmusics.com/wp-content/uploads/2025/02/IMG_20250205_200927_718_resize_50.jpg" alt="موزیک" />
-        
-         <h4>خواننده این اثر : محسن چاووشی / پخش آنلاین همین موزیک</h4>
-        
-              
-        <!-- بخش موزیک که مخفی است -->
-        <div class="box-audio">
-            <audio controls class="audio" id="chavoshi" >
-                <source src="./mp3/Mohsen Chavoshi.mp3" type="audio/mpeg" />
-                مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
-            </audio>
+        <div class="card">
+          <i class="fas fa-store"></i>
+          <h3>فروشگاه اینترنتی</h3>
+          <p>راه‌اندازی فروشگاه آنلاین با امکانات پیشرفته برای فروش محصولات.</p>
+          <a href="services.html#shop" class="learn-more">بیشتر بدانید</a>
         </div>
-   <a href="./mp3/Mohsen Chavoshi.mp3" download>
-    <button class="download-btn">🎧 دانلود با کیفیت 320</button>
-  </a>
-    </div>
-        </section>
-      </div>
+        <div class="card">
+          <i class="fas fa-search-dollar"></i>
+          <h3>سئو و بهینه‌سازی</h3>
+          <p>افزایش رتبه گوگل با تکنیک‌های سئو کلاه سفید و اصولی.</p>
+          <a href="services.html#seo" class="learn-more">بیشتر بدانید</a>
+        </div>
+        <div class="card">
+          <i class="fas fa-bullhorn"></i>
+          <h3>دیجیتال مارکتینگ</h3>
+          <p>تبلیغات هدفمند در گوگل و شبکه‌های اجتماعی.</p>
+          <a href="services.html#marketing" class="learn-more">بیشتر بدانید</a>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-    
+
+    <!-- فوتر سایت -->
+    <footer>
+      <section id="newsletter">
+        <h4>عضویت در خبرنامه</h4>
+        <form onsubmit="return validateEmail();">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="ایمیل خود را وارد کنید"
+            required
+            aria-label="عضویت در خبرنامه"
+          />
+          <button type="submit">ثبت‌نام</button>
+        </form>
+      </section>
+
+      <section id="contact">
+        <h4>تماس با ما</h4>
+        <p>آدرس: تهران، خیابان آزادی، پلاک ۱۲۳</p>
+        <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+        <p>ایمیل: info@example.com</p>
+      </section>
+
+      <section id="links">
+        <h4>لینک‌های کلیدی</h4>
+        <ul>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">سوالات متداول</a></li>
+          <li><a href="#">شرایط استفاده</a></li>
+          <li><a href="#">حریم خصوصی</a></li>
+        </ul>
+      </section>
+
+      <section id="rights">
+        <p>تمامی حقوق محفوظ است - M.A.x Team <span id="year"></span></p>
+      </section>
+    </footer>
+
+    <!-- اسکریپت‌های مورد نیاز -->
+    <script src="./script.js"></script>
   </body>
-  <script src="./scriptm.js"></script>
 </html>
